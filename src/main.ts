@@ -3,6 +3,7 @@ import App from './App.vue'
 import './index.css'
 import router from './router/index'
 import vuex from './store/index'
+import './mock/mock'
 
 const app = createApp(App)
 
