@@ -1,14 +1,16 @@
 <!--  -->
 <template>
   <div class="home">
-    <zhihuHeader :day="day" :month="month" />
+    <zhihu-header :day="day" :month="month" />
     <zhihu-banner :bannerData="bannerData" />
+    <zhihu-newsItem :news="newsData" />
   </div>
 </template>
 
 <script lang="ts">
 import zhihuHeader from "../components/Header.vue";
 import zhihuBanner from "/@/components/Banner.vue";
+import zhihuNewsItem from "../components/NewsItem.vue";
 import { reactive, toRefs, computed, onBeforeMount } from "vue";
 import { getBannerList } from "../api/index";
 import utils from "../utils";
@@ -17,6 +19,7 @@ export default {
   components: {
     zhihuHeader,
     zhihuBanner,
+    zhihuNewsItem,
   },
 
   setup() {

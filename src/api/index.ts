@@ -7,6 +7,20 @@ export const getBannerList = () => {
     })
 }
 
+//  获取首页newsList数据
+export const getNewsList = () => {
+    return instance({
+        url: '/newsList'
+    })
+}
+
+//获取newsDetail数据
+export const getNewsDetail = (id: any) => {
+    return instance.post('/detailList', {
+        id
+    })
+}
+
 export default {
     getBannerList
 }
