@@ -10,6 +10,16 @@ const viteConfig: UserConfig = {
 
     /* 运行自动打开浏览器 */
     open: false,
+
+    /* proxy */
+    proxy: {
+        '/api': {
+            target: 'https://uni937d4b0-6cc760.service.tcloudbase.com',
+            changeOrigin: true,
+            rewrite: path => path.replace(/^\/api/, '')
+        }
+    }
+
 };
 
 export default viteConfig;
