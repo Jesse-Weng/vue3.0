@@ -1,8 +1,12 @@
-import request from './axios'
+import instance from './axios'
 
 // 获取首页新闻数据
-export const getNewsList = () => {
-    return request({
-        url: '/newsList'
+export const getBannerList = () => {
+    return instance({
+        url: '/bannerList'
     })
+}
+
+export default {
+    getBannerList
 }
