@@ -5,10 +5,13 @@ const path = require('path')
 
 const viteConfig: UserConfig = {
     /* 端口号 */
-    port: 3555,
+    port: 7100,
 
     /* hostname */
     hostname: 'localhost',
+
+    /* 允许跨域访问 */
+    cors: true,
 
     /* 运行自动打开浏览器 */
     open: false,

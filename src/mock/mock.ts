@@ -49,10 +49,9 @@ Mock.mock('/api/newsList', 'get', {
         }
     ]
 })
+
 Mock.mock(('/api/detailList'), 'post', (options: any) => {
     let { id } = JSON.parse(options.body)
-    console.log(id)
-
     if (id == 1) {
         let data = {
             "author": "作者 / biokiwi",
@@ -62,22 +61,16 @@ Mock.mock(('/api/detailList'), 'post', (options: any) => {
             "time": "2小时前",
             "title": "金发碧眼为什么很少在白人以外的种族出现？"
         }
-
         return data
-
     } else if (id == 2) {
         let data = {
-
             "author": "作者 / kalinnn",
             "body": "<div class=\"main-wrap content-wrap\">\n <p>我很满意鲁伯特塑造的罗恩，他在里面同龄人中演技可以说数一数二，非常自然。就像罗琳说的，「他是个天才，不用我多说，他好像天生就知道怎么演好罗恩。」</p> \n <p>罗恩没有电影里那么傻憨，电影里的罗恩被弱化太多太多了。</p> \n <p>但我不满意编剧导演塑造的罗恩。</p> \n <p>电影这里的改编应该是为了弥补后面删掉了赫敏逻辑推理出毒药魔药的高光片段，好让赫敏在最后学院杯中得分。所以只能把罗恩搞弱，把赫敏高光移到魔鬼网这里。</p> \n <p>电影这里的改编应该是为了弥补后面删掉了赫敏逻辑推理出毒药魔药的高光片段，好让赫敏在最后学院杯中得分。所以只能把罗恩搞弱，把赫敏高光移到魔鬼网这里。</p> </div>",
             "id": 2,
             "img": "https://pic2.zhimg.com/v2-86bcc639835a991b61602b73310604b8_fhd.jpg?source=8673f162",
             "time": "30分钟前",
             "title": "《哈利波特》原著中与电影中人物有哪些差别？"
-
-
         }
-
         return data
     } else if (id == 3) {
         let data = {
@@ -88,7 +81,6 @@ Mock.mock(('/api/detailList'), 'post', (options: any) => {
             "time": "2小时前",
             "title": "有哪些适合情侣两个人一起玩的桌游？"
         }
-
         return data
     }
 
